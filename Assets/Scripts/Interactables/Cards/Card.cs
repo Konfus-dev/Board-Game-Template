@@ -5,24 +5,26 @@ public class Card : MonoBehaviour
 {
 
     #region globals
-    private Vector3 startAngles;
     private bool isMoving;
     private bool isFlipping;
+    private bool isFlipped;
     #endregion
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        startAngles = transform.localEulerAngles;
-    }
 
     private void OnMouseDown()
     {
+        if (isFlipped) return;
+
+        this.tag = "Untagged";
+
         Vector3 cardRestPos = this.transform.position;
-        //StartCoroutine(MoveCardTo(transform))
+
+        StartCoroutine(MoveCardTo(cardRestPos + Vector3.up, .2f));
+        StartCoroutine(RotateCard(Quaternion.Euler(new Vector3(90, this.transform.rotation.eulerAngles.y, this.transform.eulerAngles.z)), .3f));
+
+        isFlipped = true;
     }
 
-    public IEnumerator MoveCardTo(Vector3 toPosition, Quaternion toRotataion, float duration)
+    public IEnumerator MoveCardTo(Vector3 toPosition, float duration)
     {
         //Make sure there is only one instance of this function running
         if (isMoving)
@@ -35,7 +37,6 @@ public class Card : MonoBehaviour
 
         //Get the current position and rotation as well as target pos and rot
         Vector3 startPos = this.transform.position;
-        Quaternion startRot = this.transform.rotation;
 
         this.GetComponent<Rigidbody>().isKinematic = true;
 
@@ -44,7 +45,6 @@ public class Card : MonoBehaviour
         {
             counter += Time.deltaTime;
             this.transform.position = Vector3.Lerp(startPos, toPosition, counter / duration);
-            this.transform.rotation = Quaternion.Lerp(startRot, toRotataion, counter / duration);
             yield return null;
         }
 
@@ -52,7 +52,7 @@ public class Card : MonoBehaviour
         isMoving = false;
     }
 
-    public IEnumerator FlipCard(float duration)
+    public IEnumerator RotateCard(Quaternion toRotation, float duration)
     {
         //Make sure there is only one instance of this function running
         if (isFlipping)
@@ -64,13 +64,20 @@ public class Card : MonoBehaviour
         float counter = 0;
 
         //Get the current position of the object to be moved
-        Vector3 startRot = transform.eulerAngles;
+        Quaternion startRot = this.transform.rotation;
 
-        //Move card
+        this.GetComponent<Rigidbody>().isKinematic = true;
+
+        //Rotate card
         while (counter < duration)
         {
-            //when double click flip card 180 degrees on x axis
-            transform.eulerAngles = Vector3.Lerp(startRot, new Vector3(90, startAngles.y, startAngles.z), counter / duration);
+            counter += Time.deltaTime;
+            this.transform.localRotation = Quaternion.Slerp(startRot, toRotation, counter / duration);
+            yield return null;
         }
+
+        this.transform.localRotation = toRotation;
+        this.GetComponent<Rigidbody>().isKinematic = false;
+        isFlipping = false;
     }
 }

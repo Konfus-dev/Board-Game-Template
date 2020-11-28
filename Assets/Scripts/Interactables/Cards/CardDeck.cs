@@ -32,15 +32,18 @@ public class CardDeck : MonoBehaviour
             //get top card from deck
             Transform card = transform.GetChild(transform.childCount - 1);
 
+            //remove card from deck
+            card.parent = null;
+
             //orient card correctly and add grabbable tag
             card.eulerAngles = new Vector3(-90, 0, 0);
             card.tag = "Clickable";
 
-            //remove card from deck
-            card.parent = null;
-
             //lerp cards to pos
-            StartCoroutine(card.GetComponent<Card>().MoveCardTo(cardSlots[x].position, cardSlots[x].rotation, .3f));
+            StartCoroutine(card.GetComponent<Card>().MoveCardTo(cardSlots[x].position, .3f));
+            StartCoroutine(card.GetComponent<Card>().RotateCard(
+                Quaternion.Euler(new Vector3(-90, cardSlots[x].rotation.eulerAngles.y, 0))
+                , .3f));
             yield return new WaitForSeconds(.25f);
         }
 
