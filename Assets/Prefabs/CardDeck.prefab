@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 409434855491646987}
   - component: {fileID: 409434855491646986}
   - component: {fileID: 409434855491646990}
-  - component: {fileID: 409434855491646989}
-  - component: {fileID: 409434855491646988}
+  - component: {fileID: 2828595093387515859}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -59,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,9 +95,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -153830957423991239, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &409434855491646986
 Rigidbody:
@@ -110,10 +110,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &409434855491646990
 MonoBehaviour:
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &409434855491646989
+--- !u!114 &2828595093387515859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,25 +136,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 409434855491646985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &409434855491646988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409434855491646985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &705665137447405000
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,8 +153,7 @@ GameObject:
   - component: {fileID: 705665137447405002}
   - component: {fileID: 705665137447405001}
   - component: {fileID: 705665137447405005}
-  - component: {fileID: 705665137447405004}
-  - component: {fileID: 705665137447405003}
+  - component: {fileID: 1267184346750370867}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -214,6 +197,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -250,9 +234,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2865104911859505335, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &705665137447405001
 Rigidbody:
@@ -265,10 +249,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &705665137447405005
 MonoBehaviour:
@@ -282,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &705665137447405004
+--- !u!114 &1267184346750370867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,25 +275,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 705665137447405000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &705665137447405003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705665137447405000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &778908695994159337
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,8 +292,7 @@ GameObject:
   - component: {fileID: 778908695994159339}
   - component: {fileID: 778908695994159338}
   - component: {fileID: 778908695994159342}
-  - component: {fileID: 778908695994159341}
-  - component: {fileID: 778908695994159340}
+  - component: {fileID: 4243790298197282823}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -369,6 +336,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -405,9 +373,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -8936622394817868014, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &778908695994159338
 Rigidbody:
@@ -420,10 +388,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &778908695994159342
 MonoBehaviour:
@@ -437,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &778908695994159341
+--- !u!114 &4243790298197282823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,25 +414,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 778908695994159337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &778908695994159340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778908695994159337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &840754268145113933
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,8 +431,7 @@ GameObject:
   - component: {fileID: 840754268145113935}
   - component: {fileID: 840754268145113934}
   - component: {fileID: 840754268145113922}
-  - component: {fileID: 840754268145113921}
-  - component: {fileID: 840754268145113920}
+  - component: {fileID: 8369579375318559991}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -524,6 +475,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -560,9 +512,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5198267681279241171, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &840754268145113934
 Rigidbody:
@@ -575,10 +527,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &840754268145113922
 MonoBehaviour:
@@ -592,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &840754268145113921
+--- !u!114 &8369579375318559991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,25 +553,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 840754268145113933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &840754268145113920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840754268145113933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &916448998088346998
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,8 +570,7 @@ GameObject:
   - component: {fileID: 916448998088346952}
   - component: {fileID: 916448998088346999}
   - component: {fileID: 916448998088346955}
-  - component: {fileID: 916448998088346954}
-  - component: {fileID: 916448998088346953}
+  - component: {fileID: 1000642998013851141}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -679,6 +614,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -715,9 +651,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -6657180443270484345, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &916448998088346999
 Rigidbody:
@@ -730,10 +666,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &916448998088346955
 MonoBehaviour:
@@ -747,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &916448998088346954
+--- !u!114 &1000642998013851141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -756,25 +692,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 916448998088346998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &916448998088346953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916448998088346998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &1100737483761445047
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,8 +709,7 @@ GameObject:
   - component: {fileID: 1100737483761445001}
   - component: {fileID: 1100737483761445000}
   - component: {fileID: 1100737483761445004}
-  - component: {fileID: 1100737483761445003}
-  - component: {fileID: 1100737483761445002}
+  - component: {fileID: 1685317605831078381}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -834,6 +753,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -870,9 +790,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 855131390749405241, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &1100737483761445000
 Rigidbody:
@@ -885,10 +805,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &1100737483761445004
 MonoBehaviour:
@@ -902,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1100737483761445003
+--- !u!114 &1685317605831078381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -911,25 +831,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1100737483761445047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &1100737483761445002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100737483761445047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &1190603518040497269
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,8 +848,7 @@ GameObject:
   - component: {fileID: 1190603518040497271}
   - component: {fileID: 1190603518040497270}
   - component: {fileID: 1190603518040497226}
-  - component: {fileID: 1190603518040497225}
-  - component: {fileID: 1190603518040497224}
+  - component: {fileID: 6673909062810953160}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -989,6 +892,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1025,9 +929,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &1190603518040497270
 Rigidbody:
@@ -1040,10 +944,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &1190603518040497226
 MonoBehaviour:
@@ -1057,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1190603518040497225
+--- !u!114 &6673909062810953160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1066,25 +970,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190603518040497269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &1190603518040497224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190603518040497269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &1208556667792088935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,8 +987,7 @@ GameObject:
   - component: {fileID: 1208556667792088953}
   - component: {fileID: 1208556667792088952}
   - component: {fileID: 1208556667792088956}
-  - component: {fileID: 1208556667792088955}
-  - component: {fileID: 1208556667792088954}
+  - component: {fileID: 5741140417196086284}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -1144,6 +1031,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1180,9 +1068,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -6505552537926968463, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &1208556667792088952
 Rigidbody:
@@ -1195,10 +1083,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &1208556667792088956
 MonoBehaviour:
@@ -1212,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1208556667792088955
+--- !u!114 &5741140417196086284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1221,25 +1109,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208556667792088935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &1208556667792088954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208556667792088935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &1591143515393439370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,8 +1126,7 @@ GameObject:
   - component: {fileID: 1591143515393439372}
   - component: {fileID: 1591143515393439371}
   - component: {fileID: 1591143515393439375}
-  - component: {fileID: 1591143515393439374}
-  - component: {fileID: 1591143515393439373}
+  - component: {fileID: 5006881818388752717}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -1299,6 +1170,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1335,9 +1207,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1353746659569323740, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &1591143515393439371
 Rigidbody:
@@ -1350,10 +1222,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &1591143515393439375
 MonoBehaviour:
@@ -1367,7 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1591143515393439374
+--- !u!114 &5006881818388752717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1376,25 +1248,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1591143515393439370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &1591143515393439373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591143515393439370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &1867797087361476905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,8 +1265,7 @@ GameObject:
   - component: {fileID: 1867797087361476907}
   - component: {fileID: 1867797087361476906}
   - component: {fileID: 1867797087361476910}
-  - component: {fileID: 1867797087361476909}
-  - component: {fileID: 1867797087361476908}
+  - component: {fileID: 1925654821975798087}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -1454,6 +1309,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1490,9 +1346,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -939061152623264921, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &1867797087361476906
 Rigidbody:
@@ -1505,10 +1361,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &1867797087361476910
 MonoBehaviour:
@@ -1522,7 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1867797087361476909
+--- !u!114 &1925654821975798087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1531,25 +1387,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867797087361476905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &1867797087361476908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867797087361476905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &2433885318662545395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,8 +1404,7 @@ GameObject:
   - component: {fileID: 2433885318662545397}
   - component: {fileID: 2433885318662545396}
   - component: {fileID: 2433885318662545352}
-  - component: {fileID: 2433885318662545399}
-  - component: {fileID: 2433885318662545398}
+  - component: {fileID: 1946280773286178684}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -1609,6 +1448,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1645,9 +1485,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8552134717624371188, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &2433885318662545396
 Rigidbody:
@@ -1660,10 +1500,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &2433885318662545352
 MonoBehaviour:
@@ -1677,7 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2433885318662545399
+--- !u!114 &1946280773286178684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1686,25 +1526,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2433885318662545395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &2433885318662545398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2433885318662545395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &2490043498545505625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1553,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2490043498545505625}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.78, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1788,7 +1612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ae0ab96e55246c898ba927fbdd2dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardTextures:
+  cardPlacerTemplate: {fileID: 0}
+  cardTextures:
   - {fileID: 2800000, guid: 583952e10645d446eae4ddaa1bb7ab13, type: 3}
   - {fileID: 2800000, guid: c72648f3b0fb74b6d8cd1dd3c56baa86, type: 3}
   - {fileID: 2800000, guid: 640c3a7f2c39d4d33a8ae3ecf54502da, type: 3}
@@ -1829,7 +1654,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 8979f6f67d33e4e048cb2c81f0c3722e, type: 3}
   - {fileID: 2800000, guid: ba68b198ef53d4681999456b0bb069df, type: 3}
   - {fileID: 2800000, guid: 3b4fea5c7ec7f4bc385ab2f6e4cefc8e, type: 3}
-  CardsPlaces:
+  cardSlots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1854,8 +1679,7 @@ GameObject:
   - component: {fileID: 2769394555540159242}
   - component: {fileID: 2769394555540159241}
   - component: {fileID: 2769394555540159245}
-  - component: {fileID: 2769394555540159244}
-  - component: {fileID: 2769394555540159243}
+  - component: {fileID: 908442245134575488}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -1899,6 +1723,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1935,9 +1760,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &2769394555540159241
 Rigidbody:
@@ -1950,10 +1775,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &2769394555540159245
 MonoBehaviour:
@@ -1967,7 +1792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2769394555540159244
+--- !u!114 &908442245134575488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1976,25 +1801,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2769394555540159240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &2769394555540159243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2769394555540159240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &2919764622436599189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,8 +1818,7 @@ GameObject:
   - component: {fileID: 2919764622436599191}
   - component: {fileID: 2919764622436599190}
   - component: {fileID: 2919764622436598890}
-  - component: {fileID: 2919764622436598889}
-  - component: {fileID: 2919764622436598888}
+  - component: {fileID: 5871233950593899241}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2054,6 +1862,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2090,9 +1899,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &2919764622436599190
 Rigidbody:
@@ -2105,10 +1914,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &2919764622436598890
 MonoBehaviour:
@@ -2122,7 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2919764622436598889
+--- !u!114 &5871233950593899241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2131,25 +1940,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2919764622436599189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &2919764622436598888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2919764622436599189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &3320502257288500827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,8 +1957,7 @@ GameObject:
   - component: {fileID: 3320502257288500829}
   - component: {fileID: 3320502257288500828}
   - component: {fileID: 3320502257288500816}
-  - component: {fileID: 3320502257288500831}
-  - component: {fileID: 3320502257288500830}
+  - component: {fileID: 1560790530839931583}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2209,6 +2001,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2245,9 +2038,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 7414509850709746518, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &3320502257288500828
 Rigidbody:
@@ -2260,10 +2053,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &3320502257288500816
 MonoBehaviour:
@@ -2277,7 +2070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3320502257288500831
+--- !u!114 &1560790530839931583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2286,25 +2079,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3320502257288500827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &3320502257288500830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3320502257288500827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &3342015908461709717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,8 +2096,7 @@ GameObject:
   - component: {fileID: 3342015908461709719}
   - component: {fileID: 3342015908461709718}
   - component: {fileID: 3342015908461709418}
-  - component: {fileID: 3342015908461709417}
-  - component: {fileID: 3342015908461709416}
+  - component: {fileID: 9087421038490739015}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2364,6 +2140,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2400,9 +2177,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2911736426955009642, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &3342015908461709718
 Rigidbody:
@@ -2415,10 +2192,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &3342015908461709418
 MonoBehaviour:
@@ -2432,7 +2209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3342015908461709417
+--- !u!114 &9087421038490739015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2441,25 +2218,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3342015908461709717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &3342015908461709416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3342015908461709717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &3594764286451666867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,8 +2235,7 @@ GameObject:
   - component: {fileID: 3594764286451666869}
   - component: {fileID: 3594764286451666868}
   - component: {fileID: 3594764286451666824}
-  - component: {fileID: 3594764286451666871}
-  - component: {fileID: 3594764286451666870}
+  - component: {fileID: 5463418230991719241}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2519,6 +2279,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2555,9 +2316,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 7807538432633192378, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &3594764286451666868
 Rigidbody:
@@ -2570,10 +2331,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &3594764286451666824
 MonoBehaviour:
@@ -2587,7 +2348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3594764286451666871
+--- !u!114 &5463418230991719241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2596,25 +2357,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3594764286451666867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &3594764286451666870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3594764286451666867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &3712760644223921731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,8 +2374,7 @@ GameObject:
   - component: {fileID: 3712760644223921733}
   - component: {fileID: 3712760644223921732}
   - component: {fileID: 3712760644223921752}
-  - component: {fileID: 3712760644223921735}
-  - component: {fileID: 3712760644223921734}
+  - component: {fileID: 3731701620596886136}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2674,6 +2418,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2710,9 +2455,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4583407886439279732, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &3712760644223921732
 Rigidbody:
@@ -2725,10 +2470,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &3712760644223921752
 MonoBehaviour:
@@ -2742,7 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3712760644223921735
+--- !u!114 &3731701620596886136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2751,25 +2496,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3712760644223921731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &3712760644223921734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3712760644223921731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &3893209015637605209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,8 +2513,7 @@ GameObject:
   - component: {fileID: 3893209015637605211}
   - component: {fileID: 3893209015637605210}
   - component: {fileID: 3893209015637605214}
-  - component: {fileID: 3893209015637605213}
-  - component: {fileID: 3893209015637605212}
+  - component: {fileID: 5486463752992504332}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2829,6 +2557,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2865,9 +2594,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1550514412580984892, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &3893209015637605210
 Rigidbody:
@@ -2880,10 +2609,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &3893209015637605214
 MonoBehaviour:
@@ -2897,7 +2626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3893209015637605213
+--- !u!114 &5486463752992504332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2906,25 +2635,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3893209015637605209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &3893209015637605212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3893209015637605209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &4215512803241972304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,8 +2652,7 @@ GameObject:
   - component: {fileID: 4215512803241972306}
   - component: {fileID: 4215512803241972305}
   - component: {fileID: 4215512803241972309}
-  - component: {fileID: 4215512803241972308}
-  - component: {fileID: 4215512803241972307}
+  - component: {fileID: 4774594724524464680}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2984,6 +2696,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3020,9 +2733,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5741174448488666723, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &4215512803241972305
 Rigidbody:
@@ -3035,10 +2748,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &4215512803241972309
 MonoBehaviour:
@@ -3052,7 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4215512803241972308
+--- !u!114 &4774594724524464680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3061,25 +2774,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4215512803241972304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &4215512803241972307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4215512803241972304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &4362451299700569874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,8 +2791,7 @@ GameObject:
   - component: {fileID: 4362451299700569876}
   - component: {fileID: 4362451299700569875}
   - component: {fileID: 4362451299700569879}
-  - component: {fileID: 4362451299700569878}
-  - component: {fileID: 4362451299700569877}
+  - component: {fileID: 5543122844098097131}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -3139,6 +2835,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3175,9 +2872,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -362046790695249943, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &4362451299700569875
 Rigidbody:
@@ -3190,10 +2887,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &4362451299700569879
 MonoBehaviour:
@@ -3207,7 +2904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4362451299700569878
+--- !u!114 &5543122844098097131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3216,25 +2913,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4362451299700569874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &4362451299700569877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4362451299700569874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &4423740725507725648
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,8 +2930,7 @@ GameObject:
   - component: {fileID: 4423740725507725650}
   - component: {fileID: 4423740725507725649}
   - component: {fileID: 4423740725507725653}
-  - component: {fileID: 4423740725507725652}
-  - component: {fileID: 4423740725507725651}
+  - component: {fileID: 6728517431177976511}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -3294,6 +2974,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3330,9 +3011,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3329902420748629119, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &4423740725507725649
 Rigidbody:
@@ -3345,10 +3026,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &4423740725507725653
 MonoBehaviour:
@@ -3362,7 +3043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4423740725507725652
+--- !u!114 &6728517431177976511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3371,25 +3052,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4423740725507725648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &4423740725507725651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4423740725507725648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &4863481724592786803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,8 +3069,7 @@ GameObject:
   - component: {fileID: 4863481724592786805}
   - component: {fileID: 4863481724592786804}
   - component: {fileID: 4863481724592786760}
-  - component: {fileID: 4863481724592786807}
-  - component: {fileID: 4863481724592786806}
+  - component: {fileID: 3745130915880380277}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -3449,6 +3113,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3485,9 +3150,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8385836491182413749, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &4863481724592786804
 Rigidbody:
@@ -3500,10 +3165,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &4863481724592786760
 MonoBehaviour:
@@ -3517,7 +3182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4863481724592786807
+--- !u!114 &3745130915880380277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3526,25 +3191,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4863481724592786803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &4863481724592786806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4863481724592786803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &5021459738848138506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3559,8 +3208,7 @@ GameObject:
   - component: {fileID: 5021459738848138508}
   - component: {fileID: 5021459738848138507}
   - component: {fileID: 5021459738848138511}
-  - component: {fileID: 5021459738848138510}
-  - component: {fileID: 5021459738848138509}
+  - component: {fileID: 3630340361716797507}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -3604,6 +3252,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3640,9 +3289,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 6163357941915963767, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &5021459738848138507
 Rigidbody:
@@ -3655,10 +3304,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &5021459738848138511
 MonoBehaviour:
@@ -3672,7 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5021459738848138510
+--- !u!114 &3630340361716797507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3681,25 +3330,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5021459738848138506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &5021459738848138509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5021459738848138506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &5221873276884494980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,8 +3347,7 @@ GameObject:
   - component: {fileID: 5221873276884494982}
   - component: {fileID: 5221873276884494981}
   - component: {fileID: 5221873276884495001}
-  - component: {fileID: 5221873276884495000}
-  - component: {fileID: 5221873276884494983}
+  - component: {fileID: 7347179792345570949}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -3759,6 +3391,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3795,9 +3428,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1890910595786045333, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &5221873276884494981
 Rigidbody:
@@ -3810,10 +3443,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &5221873276884495001
 MonoBehaviour:
@@ -3827,7 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5221873276884495000
+--- !u!114 &7347179792345570949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3836,25 +3469,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5221873276884494980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &5221873276884494983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5221873276884494980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &5322693170027920624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,8 +3486,7 @@ GameObject:
   - component: {fileID: 5322693170027920626}
   - component: {fileID: 5322693170027920625}
   - component: {fileID: 5322693170027920629}
-  - component: {fileID: 5322693170027920628}
-  - component: {fileID: 5322693170027920627}
+  - component: {fileID: 1152967072253676967}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -3914,6 +3530,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3950,9 +3567,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5053925668127403250, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &5322693170027920625
 Rigidbody:
@@ -3965,10 +3582,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &5322693170027920629
 MonoBehaviour:
@@ -3982,7 +3599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5322693170027920628
+--- !u!114 &1152967072253676967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3991,25 +3608,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5322693170027920624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &5322693170027920627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5322693170027920624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &5778672092531012194
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,8 +3625,7 @@ GameObject:
   - component: {fileID: 5778672092531012196}
   - component: {fileID: 5778672092531012195}
   - component: {fileID: 5778672092531012199}
-  - component: {fileID: 5778672092531012198}
-  - component: {fileID: 5778672092531012197}
+  - component: {fileID: 5249377123488834686}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4069,6 +3669,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4105,9 +3706,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7771613508976059695, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &5778672092531012195
 Rigidbody:
@@ -4120,10 +3721,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &5778672092531012199
 MonoBehaviour:
@@ -4137,7 +3738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5778672092531012198
+--- !u!114 &5249377123488834686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4146,25 +3747,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5778672092531012194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &5778672092531012197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778672092531012194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &5853648107286106051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,8 +3764,7 @@ GameObject:
   - component: {fileID: 5853648107286106053}
   - component: {fileID: 5853648107286106052}
   - component: {fileID: 5853648107286106072}
-  - component: {fileID: 5853648107286106055}
-  - component: {fileID: 5853648107286106054}
+  - component: {fileID: 1836773551982973844}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4196,7 +3780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5853648107286106051}
   m_LocalRotation: {x: -0.707094, y: -0.0042545707, z: -0.0042545707, w: 0.70709395}
-  m_LocalPosition: {x: -0, y: 1.2529389, z: -0.016021872}
+  m_LocalPosition: {x: 0.04, y: -0.061, z: -0.016021872}
   m_LocalScale: {x: 100.00001, y: 100.00001, z: 66.4724}
   m_Children: []
   m_Father: {fileID: 1501159405323130698}
@@ -4224,6 +3808,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4260,9 +3845,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 7860663910981750377, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &5853648107286106052
 Rigidbody:
@@ -4275,10 +3860,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &5853648107286106072
 MonoBehaviour:
@@ -4292,7 +3877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5853648107286106055
+--- !u!114 &1836773551982973844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4301,25 +3886,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5853648107286106051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &5853648107286106054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5853648107286106051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &6070435540361132163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4334,8 +3903,7 @@ GameObject:
   - component: {fileID: 6070435540361132165}
   - component: {fileID: 6070435540361132164}
   - component: {fileID: 6070435540361132184}
-  - component: {fileID: 6070435540361132167}
-  - component: {fileID: 6070435540361132166}
+  - component: {fileID: 2261258555005222191}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4379,6 +3947,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4415,9 +3984,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &6070435540361132164
 Rigidbody:
@@ -4430,10 +3999,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &6070435540361132184
 MonoBehaviour:
@@ -4447,7 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6070435540361132167
+--- !u!114 &2261258555005222191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4456,25 +4025,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6070435540361132163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &6070435540361132166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6070435540361132163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &6128049105081168849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,8 +4042,7 @@ GameObject:
   - component: {fileID: 6128049105081168851}
   - component: {fileID: 6128049105081168850}
   - component: {fileID: 6128049105081168854}
-  - component: {fileID: 6128049105081168853}
-  - component: {fileID: 6128049105081168852}
+  - component: {fileID: 8227060339554138578}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4534,6 +4086,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4570,9 +4123,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2477511411847689622, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &6128049105081168850
 Rigidbody:
@@ -4585,10 +4138,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &6128049105081168854
 MonoBehaviour:
@@ -4602,7 +4155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6128049105081168853
+--- !u!114 &8227060339554138578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4611,25 +4164,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6128049105081168849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &6128049105081168852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6128049105081168849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &6652600142742638339
 GameObject:
   m_ObjectHideFlags: 0
@@ -4644,8 +4181,7 @@ GameObject:
   - component: {fileID: 6652600142742638341}
   - component: {fileID: 6652600142742638340}
   - component: {fileID: 6652600142742638360}
-  - component: {fileID: 6652600142742638343}
-  - component: {fileID: 6652600142742638342}
+  - component: {fileID: 5387379962701783674}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4689,6 +4225,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4725,9 +4262,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1879900250216117662, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &6652600142742638340
 Rigidbody:
@@ -4740,10 +4277,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &6652600142742638360
 MonoBehaviour:
@@ -4757,7 +4294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6652600142742638343
+--- !u!114 &5387379962701783674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4766,25 +4303,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6652600142742638339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &6652600142742638342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6652600142742638339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &6709554211253527328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,8 +4320,7 @@ GameObject:
   - component: {fileID: 6709554211253527330}
   - component: {fileID: 6709554211253527329}
   - component: {fileID: 6709554211253527333}
-  - component: {fileID: 6709554211253527332}
-  - component: {fileID: 6709554211253527331}
+  - component: {fileID: 9067887035299008645}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4844,6 +4364,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4880,9 +4401,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -4142219771195877799, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &6709554211253527329
 Rigidbody:
@@ -4895,10 +4416,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &6709554211253527333
 MonoBehaviour:
@@ -4912,7 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6709554211253527332
+--- !u!114 &9067887035299008645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4921,25 +4442,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6709554211253527328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &6709554211253527331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6709554211253527328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &6765688937087603034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,8 +4459,7 @@ GameObject:
   - component: {fileID: 6765688937087603036}
   - component: {fileID: 6765688937087603035}
   - component: {fileID: 6765688937087603039}
-  - component: {fileID: 6765688937087603038}
-  - component: {fileID: 6765688937087603037}
+  - component: {fileID: 4127995054251954684}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4999,6 +4503,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5035,9 +4540,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5928785198427282456, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &6765688937087603035
 Rigidbody:
@@ -5050,10 +4555,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &6765688937087603039
 MonoBehaviour:
@@ -5067,7 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6765688937087603038
+--- !u!114 &4127995054251954684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5076,25 +4581,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6765688937087603034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &6765688937087603037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6765688937087603034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &7154400570197236058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5109,8 +4598,7 @@ GameObject:
   - component: {fileID: 7154400570197236060}
   - component: {fileID: 7154400570197236059}
   - component: {fileID: 7154400570197236063}
-  - component: {fileID: 7154400570197236062}
-  - component: {fileID: 7154400570197236061}
+  - component: {fileID: 4138412602916581609}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -5154,6 +4642,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5190,9 +4679,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2228417370725966487, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &7154400570197236059
 Rigidbody:
@@ -5205,10 +4694,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &7154400570197236063
 MonoBehaviour:
@@ -5222,7 +4711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7154400570197236062
+--- !u!114 &4138412602916581609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5231,25 +4720,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7154400570197236058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &7154400570197236061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154400570197236058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &7343170450323423683
 GameObject:
   m_ObjectHideFlags: 0
@@ -5264,8 +4737,7 @@ GameObject:
   - component: {fileID: 7343170450323423685}
   - component: {fileID: 7343170450323423684}
   - component: {fileID: 7343170450323423704}
-  - component: {fileID: 7343170450323423687}
-  - component: {fileID: 7343170450323423686}
+  - component: {fileID: 1952227123243341461}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -5309,6 +4781,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5345,9 +4818,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2363565981455421637, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &7343170450323423684
 Rigidbody:
@@ -5360,10 +4833,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &7343170450323423704
 MonoBehaviour:
@@ -5377,7 +4850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7343170450323423687
+--- !u!114 &1952227123243341461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5386,25 +4859,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7343170450323423683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &7343170450323423686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7343170450323423683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &7378381222393599938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,8 +4876,7 @@ GameObject:
   - component: {fileID: 7378381222393599940}
   - component: {fileID: 7378381222393599939}
   - component: {fileID: 7378381222393599943}
-  - component: {fileID: 7378381222393599942}
-  - component: {fileID: 7378381222393599941}
+  - component: {fileID: 4310308390153568275}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -5464,6 +4920,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5500,9 +4957,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2746142260806068395, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &7378381222393599939
 Rigidbody:
@@ -5515,10 +4972,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &7378381222393599943
 MonoBehaviour:
@@ -5532,7 +4989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7378381222393599942
+--- !u!114 &4310308390153568275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5541,25 +4998,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7378381222393599938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &7378381222393599941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7378381222393599938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &7652190696148658237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,8 +5015,7 @@ GameObject:
   - component: {fileID: 7652190696148658239}
   - component: {fileID: 7652190696148658238}
   - component: {fileID: 7652190696148658226}
-  - component: {fileID: 7652190696148658225}
-  - component: {fileID: 7652190696148658224}
+  - component: {fileID: 307723406101280891}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -5619,6 +5059,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5655,9 +5096,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1716842359454501035, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &7652190696148658238
 Rigidbody:
@@ -5670,10 +5111,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &7652190696148658226
 MonoBehaviour:
@@ -5687,7 +5128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7652190696148658225
+--- !u!114 &307723406101280891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5696,25 +5137,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7652190696148658237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &7652190696148658224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7652190696148658237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &8292843295964065385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,8 +5154,7 @@ GameObject:
   - component: {fileID: 8292843295964065387}
   - component: {fileID: 8292843295964065386}
   - component: {fileID: 8292843295964065390}
-  - component: {fileID: 8292843295964065389}
-  - component: {fileID: 8292843295964065388}
+  - component: {fileID: 1915109459058156405}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -5774,6 +5198,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5810,9 +5235,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &8292843295964065386
 Rigidbody:
@@ -5825,10 +5250,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &8292843295964065390
 MonoBehaviour:
@@ -5842,7 +5267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8292843295964065389
+--- !u!114 &1915109459058156405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5851,25 +5276,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8292843295964065385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &8292843295964065388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8292843295964065385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &8715231927094183459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5884,8 +5293,7 @@ GameObject:
   - component: {fileID: 8715231927094183461}
   - component: {fileID: 8715231927094183460}
   - component: {fileID: 8715231927094183480}
-  - component: {fileID: 8715231927094183463}
-  - component: {fileID: 8715231927094183462}
+  - component: {fileID: 6137471063162648852}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -5929,6 +5337,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5965,9 +5374,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3541629673168548286, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &8715231927094183460
 Rigidbody:
@@ -5980,10 +5389,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &8715231927094183480
 MonoBehaviour:
@@ -5997,7 +5406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8715231927094183463
+--- !u!114 &6137471063162648852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6006,25 +5415,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8715231927094183459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &8715231927094183462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8715231927094183459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &9047546649031396484
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,8 +5432,7 @@ GameObject:
   - component: {fileID: 9047546649031396486}
   - component: {fileID: 9047546649031396485}
   - component: {fileID: 9047546649031396505}
-  - component: {fileID: 9047546649031396504}
-  - component: {fileID: 9047546649031396487}
+  - component: {fileID: 5784651408108360012}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -6084,6 +5476,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6120,9 +5513,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3537709356157935800, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &9047546649031396485
 Rigidbody:
@@ -6135,10 +5528,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &9047546649031396505
 MonoBehaviour:
@@ -6152,7 +5545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9047546649031396504
+--- !u!114 &5784651408108360012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6161,25 +5554,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9047546649031396484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &9047546649031396487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9047546649031396484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
 --- !u!1 &9170796542204596636
 GameObject:
   m_ObjectHideFlags: 0
@@ -6194,8 +5571,7 @@ GameObject:
   - component: {fileID: 9170796542204596638}
   - component: {fileID: 9170796542204596637}
   - component: {fileID: 9170796542204596625}
-  - component: {fileID: 9170796542204596624}
-  - component: {fileID: 9170796542204596639}
+  - component: {fileID: 6118018964143193093}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -6239,6 +5615,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6275,9 +5652,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: cf1bc2de121aa4bcfad97f60689f5be3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -257278029260952120, guid: be27647769a5c42dc82d9cdba88167ce, type: 3}
 --- !u!54 &9170796542204596637
 Rigidbody:
@@ -6290,10 +5667,10 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 3
 --- !u!114 &9170796542204596625
 MonoBehaviour:
@@ -6307,7 +5684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80ef707e964a44c7b3de2abbe98bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9170796542204596624
+--- !u!114 &6118018964143193093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6316,22 +5693,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9170796542204596636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ab57e4e09464bf093cb276788c1c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc351f3ab416aaf419c95e4c85592d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUp: 0
-  CanGrab: 0
---- !u!114 &9170796542204596639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9170796542204596636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7bd2a3119134308aaeb0e90e4cd8a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleClick: 0
-  doubleClickTime: 0.25
