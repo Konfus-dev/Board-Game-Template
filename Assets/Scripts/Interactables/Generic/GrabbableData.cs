@@ -1,11 +1,13 @@
 ﻿
 using UnityEngine;
 
-public class OutOfBoundsReset : MonoBehaviour
+public class GrabbableData : MonoBehaviour
 {
-
+    #region globals
+    public Vector3 grabRotatation;
     public Vector3 restingPos;
     private Rigidbody rb;
+    #endregion
 
     private void Start()
     {

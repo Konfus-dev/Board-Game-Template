@@ -15,7 +15,6 @@ public class CameraLayer : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(camParent.name);
         cam.fieldOfView = camParent.fieldOfView;
     }
 }

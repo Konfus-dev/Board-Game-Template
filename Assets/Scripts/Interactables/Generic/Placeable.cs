@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Placeable : MonoBehaviour
 {
+    #region globals
     private GameObject copy;
     private Quaternion originalRot;
+    #endregion
 
     public IEnumerator OnGrab()
     {
@@ -44,7 +46,7 @@ public class Placeable : MonoBehaviour
 
             if (Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                placePos = new Vector3(hit.point.x, hit.point.y + .35f, hit.point.z);
+                placePos = new Vector3(hit.point.x, hit.point.y + .1f, hit.point.z);
             }
 
             copy.transform.position = placePos;
