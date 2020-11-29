@@ -102,6 +102,8 @@ public class Hand : MonoBehaviour
             StartCoroutine(placeable.OnGrab());
         }
 
+        grabbedObj.GetComponent<Collider>().enabled = false;
+
         while (grabbedObj != null)
         {
             grabbedObj.GetComponent<Rigidbody>().velocity =
@@ -116,6 +118,7 @@ public class Hand : MonoBehaviour
         Placeable placeable = grabbedObj.GetComponent<Placeable>();
         if (placeable != null)
             placeable.OnDrop();
+        grabbedObj.GetComponent<Collider>().enabled = true;
         grabbedObj = null;
     }
 }

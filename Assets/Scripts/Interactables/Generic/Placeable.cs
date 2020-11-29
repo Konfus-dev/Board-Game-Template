@@ -6,7 +6,6 @@ public class Placeable : MonoBehaviour
 {
     #region globals
     private GameObject copy;
-    private Quaternion originalRot;
     #endregion
 
     public IEnumerator OnGrab()
@@ -14,6 +13,7 @@ public class Placeable : MonoBehaviour
         copy = Instantiate(this.gameObject);
 
         Component[] copyComponents = copy.GetComponents(typeof(Component));
+
         foreach (Component comp in copyComponents)
         {
             if (comp.GetType() != typeof(Transform) &&
@@ -21,8 +21,8 @@ public class Placeable : MonoBehaviour
                 comp.GetType() != typeof(MeshFilter)) Destroy(comp);
         }
 
-        copy.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         Material[] copyMats = copy.GetComponent<Renderer>().materials;
+
         foreach (Material mat in copyMats)
         {
             mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
@@ -37,10 +37,14 @@ public class Placeable : MonoBehaviour
             mat.SetColor("_Color", newColor);
         }
 
-        originalRot = this.transform.rotation;
+        copy.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        Quaternion originalRot = this.transform.rotation;
 
         while (Hand.Instance.gameObject != null)
         {
+            if (copy == null) yield return null;
+
             RaycastHit hit;
             Vector3 placePos = Vector3.up * 10000;
 
@@ -49,9 +53,12 @@ public class Placeable : MonoBehaviour
                 placePos = new Vector3(hit.point.x, hit.point.y + .1f, hit.point.z);
             }
 
-            copy.transform.position = placePos;
-
-            copy.transform.rotation = Quaternion.Euler(new Vector3(originalRot.eulerAngles.x, this.transform.rotation.eulerAngles.y, originalRot.eulerAngles.z));
+            if (copy != null)
+            {
+                copy.transform.position = placePos;
+                copy.transform.rotation = Quaternion.Euler(new Vector3(originalRot.eulerAngles.x, this.transform.rotation.eulerAngles.y, originalRot.eulerAngles.z));
+            }
+                
             yield return null;
         }
     }
