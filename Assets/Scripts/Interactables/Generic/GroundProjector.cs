@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Placeable : MonoBehaviour
+public class GroundProjector : MonoBehaviour
 {
     #region globals
     private GameObject copy;
@@ -16,9 +16,10 @@ public class Placeable : MonoBehaviour
 
         foreach (Component comp in copyComponents)
         {
-            if (comp.GetType() != typeof(Transform) &&
-                comp.GetType() != typeof(MeshRenderer) &&
-                comp.GetType() != typeof(MeshFilter)) Destroy(comp);
+            if (comp.GetType() != typeof(Transform) && comp.GetType() != typeof(MeshRenderer) && comp.GetType() != typeof(MeshFilter))
+            {
+                Destroy(comp);
+            }
         }
 
         Material[] copyMats = copy.GetComponent<Renderer>().materials;

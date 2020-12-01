@@ -10,7 +10,7 @@ public class ResetTrigger : MonoBehaviour
         if (otherRB != null)
         {
             //Todo: add some smoke effect or something when its reset...
-            other.transform.position = other.GetComponent<GrabbableData>().restingPos + Vector3.up;
+            other.transform.position = other.GetComponent<Grabbable>().data.restingPos + Vector3.up;
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }

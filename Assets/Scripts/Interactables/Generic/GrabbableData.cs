@@ -1,24 +1,16 @@
-﻿
+﻿using System;
 using UnityEngine;
 
-public class GrabbableData : MonoBehaviour
+[Serializable]
+public class GrabbableData
 {
     #region globals
-    public Vector3 grabRotatation;
+    [HideInInspector]
     public Vector3 restingPos;
-    private Rigidbody rb;
+    [HideInInspector]
+    public Rigidbody rb;
+
+    public Vector3 handOffset;
+    public Vector3 holdingOrientation;
     #endregion
-
-    private void Start()
-    {
-        rb = this.GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        if (rb.IsSleeping())
-        {
-            restingPos = this.transform.position;
-        }
-    }
 }

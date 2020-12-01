@@ -24,7 +24,7 @@ public class CardDeck : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public IEnumerator DealCards()
+    private IEnumerator DealCards()
     {
         //go through 10 cards and deal them
         for (int x = 0; x < 10; x++)
@@ -35,21 +35,24 @@ public class CardDeck : MonoBehaviour
             //remove card from deck
             card.parent = null;
 
-            //orient card correctly and add grabbable tag
+            //orient card correctly
             card.eulerAngles = new Vector3(-90, 0, 0);
-            card.tag = "Clickable";
+
+            //set holding orientation
+            card.GetComponent<Card>().data.holdingOrientation = new Vector3(-90, cardSlots[x].rotation.eulerAngles.y, 0);
 
             //lerp cards to pos
-            StartCoroutine(card.GetComponent<Card>().MoveCardTo(cardSlots[x].position, .3f));
+            StartCoroutine(card.GetComponent<Card>().MoveCardTo(cardSlots[x].position, .4f));
             StartCoroutine(card.GetComponent<Card>().RotateCard(
                 Quaternion.Euler(new Vector3(-90, cardSlots[x].rotation.eulerAngles.y, 0))
-                , .3f));
-            yield return new WaitForSeconds(.25f);
+                , .25f));
+
+            yield return new WaitForSeconds(.5f);
         }
 
     }
 
-    public void Shuffle()
+    private void Shuffle()
     {
         //go through all children of deck
         foreach (Transform card in transform)
@@ -83,6 +86,11 @@ public class CardDeck : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnMouseDown()
+    {
+        StartCoroutine(DealCards());
     }
 }
 

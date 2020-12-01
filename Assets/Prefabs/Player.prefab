@@ -455,6 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161125691160010011}
   - component: {fileID: 1161125691160010012}
+  - component: {fileID: 5343227645360806115}
   - component: {fileID: 1161125691160010013}
   - component: {fileID: 1161125691160010010}
   m_Layer: 0
@@ -510,7 +511,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 567
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -522,6 +523,66 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &5343227645360806115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161125691160010014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1161125691160010011}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 2
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!81 &1161125691160010013
 AudioListener:
   m_ObjectHideFlags: 0
@@ -609,7 +670,7 @@ GameObject:
   - component: {fileID: 1161125692000106771}
   - component: {fileID: 1161125692000106772}
   m_Layer: 0
-  m_Name: HandCameraLayer
+  m_Name: HandLayer
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,9 +745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c073e4a7afbebe344bfb86a3291d1f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFov: 15
-  maxFov: 90
-  zoomSensitivity: 10
 --- !u!1 &1161125692827399166
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +787,7 @@ GameObject:
   - component: {fileID: 1161125692980836134}
   - component: {fileID: 1161125692980836133}
   m_Layer: 0
-  m_Name: HandParent
+  m_Name: 3D Cursor
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdced5b4161194c428bf565167f26243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandAnim: {fileID: 4318268856415890931}
+  handAnim: {fileID: 0}
 --- !u!1001 &1161125692629330835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -799,6 +857,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5a9f6246468144fd7b8e455b47b4cd68, type: 2}
+    - target: {fileID: -7532164476224183469, guid: 750f2cd572ed14891826e65da5ad9b5c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6288907929385596766, guid: 750f2cd572ed14891826e65da5ad9b5c,
         type: 3}
       propertyPath: m_Layer
@@ -1045,12 +1108,6 @@ GameObject:
 --- !u!4 &6154047278288568457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 750f2cd572ed14891826e65da5ad9b5c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1161125692629330835}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &4318268856415890931 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 750f2cd572ed14891826e65da5ad9b5c,
     type: 3}
   m_PrefabInstance: {fileID: 1161125692629330835}
   m_PrefabAsset: {fileID: 0}

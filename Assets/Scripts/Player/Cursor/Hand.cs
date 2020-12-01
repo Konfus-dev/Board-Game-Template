@@ -96,26 +96,27 @@ public class Hand : MonoBehaviour
 
         Vector3 velocity = Vector3.zero;
 
-        Placeable placeable = grabbedObj.GetComponent<Placeable>();
-        if (placeable != null)
-        {
-            StartCoroutine(placeable.OnGrab());
-        }
-
         grabbedObj.GetComponent<Collider>().enabled = false;
+
+        Grabbable grabbable = grabbedObj.GetComponent<Grabbable>();
+
+        StartCoroutine(grabbable.RotateToGrabOrientation(.25f));
 
         while (grabbedObj != null)
         {
+            if (Input.GetMouseButtonDown(1) && grabbable != null)
+                grabbable.OnRightClick();
+
             grabbedObj.GetComponent<Rigidbody>().velocity =
                     Vector3.SmoothDamp(grabbedObj.GetComponent<Rigidbody>().velocity, 
-                    (this.transform.position - grabbedObj.transform.position) * 15, ref velocity, 0.05f);
+                    (this.transform.position - grabbedObj.transform.position + grabbable.data.handOffset) * 15, ref velocity, 0.05f);
             yield return null;
         }
     }
 
     private void DropObj()
     {
-        Placeable placeable = grabbedObj.GetComponent<Placeable>();
+        GroundProjector placeable = grabbedObj.GetComponent<GroundProjector>();
         if (placeable != null)
             placeable.OnDrop();
         grabbedObj.GetComponent<Collider>().enabled = true;

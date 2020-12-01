@@ -1,27 +1,28 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card : Grabbable
 {
 
     #region globals
-    private bool isMoving;
-    private bool isFlipping;
-    private bool isFlipped;
+    private bool isMoving = false;
+    private bool isFlipping = false;
+    private bool isFlipped = false;
     #endregion
 
-    private void OnMouseDown()
+    public override void OnRightClick()
     {
-        if (isFlipped) return;
+        if (isFlipped)
+        {
+            StartCoroutine(RotateCard(Quaternion.Euler(new Vector3(-90, this.transform.rotation.eulerAngles.y, this.transform.eulerAngles.z)), .3f));
+            isFlipped = false;
+        }
 
-        this.tag = "Untagged";
-
-        Vector3 cardRestPos = this.transform.position;
-
-        StartCoroutine(MoveCardTo(cardRestPos + Vector3.up, .2f));
-        StartCoroutine(RotateCard(Quaternion.Euler(new Vector3(90, this.transform.rotation.eulerAngles.y, this.transform.eulerAngles.z)), .3f));
-
-        isFlipped = true;
+        else
+        {
+            StartCoroutine(RotateCard(Quaternion.Euler(new Vector3(90, this.transform.rotation.eulerAngles.y, this.transform.eulerAngles.z)), .3f));
+            isFlipped = true;
+        }
     }
 
     public IEnumerator MoveCardTo(Vector3 toPosition, float duration)
@@ -33,22 +34,36 @@ public class Card : MonoBehaviour
         }
         isMoving = true;
 
-        float counter = 0;
+        float liftCounter = 0;
+        float moveCounter = 0;
 
-        //Get the current position and rotation as well as target pos and rot
+        //Get the current position
         Vector3 startPos = this.transform.position;
 
-        this.GetComponent<Rigidbody>().isKinematic = true;
+        //disable physics
+        data.rb.isKinematic = true;
 
-        //Move card
-        while (counter < duration)
+        //lift card
+        while (liftCounter < .2f)
         {
-            counter += Time.deltaTime;
-            this.transform.position = Vector3.Lerp(startPos, toPosition, counter / duration);
+            liftCounter += Time.deltaTime;
+            this.transform.position = Vector3.Lerp(startPos, startPos + Vector3.up, liftCounter / duration);
             yield return null;
         }
 
-        this.GetComponent<Rigidbody>().isKinematic = false;
+        //Get the current position
+        startPos = this.transform.position;
+
+        //Move card
+        while (moveCounter < duration)
+        {
+            moveCounter += Time.deltaTime;
+            this.transform.position = Vector3.Lerp(startPos, toPosition, moveCounter / duration);
+            yield return null;
+        }
+
+        //re-enable physics
+        data.rb.isKinematic = false;
         isMoving = false;
     }
 
@@ -66,7 +81,7 @@ public class Card : MonoBehaviour
         //Get the current position of the object to be moved
         Quaternion startRot = this.transform.rotation;
 
-        this.GetComponent<Rigidbody>().isKinematic = true;
+        data.rb.isKinematic = true;
 
         //Rotate card
         while (counter < duration)
@@ -77,7 +92,7 @@ public class Card : MonoBehaviour
         }
 
         this.transform.localRotation = toRotation;
-        this.GetComponent<Rigidbody>().isKinematic = false;
+        data.rb.isKinematic = false;
         isFlipping = false;
     }
 }

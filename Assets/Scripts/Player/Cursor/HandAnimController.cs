@@ -6,28 +6,26 @@ public class HandAnimController : MonoBehaviour
 {
 
     #region globals
-    public Animator HandAnim;
-
-    Hand hand;
+    public Animator handAnim;
+    private Hand hand;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         //get animator
-        HandAnim = GetComponent<Animator>();
+        handAnim = GetComponent<Animator>();
         //get hand
-        hand = GameObject.Find("HandParent")
-            .GetComponent<Hand>();
+        hand = this.transform.parent.GetComponent<Hand>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(hand.playGrabAnim) HandAnim.Play("GrabIdle");
+        if(hand.playGrabAnim) handAnim.Play("GrabIdle");
 
-        else if(hand.playPointAnim) HandAnim.Play("PointIdle");
+        else if(hand.playPointAnim) handAnim.Play("PointIdle");
 
-        else HandAnim.Play("Idle");
+        else handAnim.Play("Idle");
     }
 }
