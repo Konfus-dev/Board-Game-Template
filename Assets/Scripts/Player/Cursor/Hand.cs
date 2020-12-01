@@ -56,8 +56,8 @@ public class Hand : MonoBehaviour
 
     private void PlayGrabAnim()
     {
-        if (Input.GetMouseButtonDown(0)) playGrabAnim = true;
-        if (Input.GetMouseButtonUp(0)) playGrabAnim = false;
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1)) playGrabAnim = true;
+        else playGrabAnim = false;
     }
 
     private void PlayPointAnim()
