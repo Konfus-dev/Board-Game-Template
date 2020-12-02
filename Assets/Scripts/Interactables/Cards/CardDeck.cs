@@ -10,12 +10,15 @@ public class CardDeck : MonoBehaviour
 
     public Texture[] cardTextures;
     public List<Transform> cardSlots;
+
+    private AudioSource cardDeckAudioEmitter;
     #endregion
 
     void Awake()
     {
-        //Shuffle cards
         Shuffle();
+
+        cardDeckAudioEmitter = this.GetComponent<AudioSource>();
 
         if (Instance == null)
             Instance = this;
@@ -40,6 +43,9 @@ public class CardDeck : MonoBehaviour
 
             //set holding orientation
             card.GetComponent<Card>().data.holdingOrientation = new Vector3(-90, cardSlots[x].rotation.eulerAngles.y, 0);
+
+            //play audio effect
+            cardDeckAudioEmitter.Play();
 
             //lerp cards to pos
             StartCoroutine(card.GetComponent<Card>().MoveCardTo(cardSlots[x].position, .4f));

@@ -1,20 +1,30 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Grabbable : MonoBehaviour
 {
     #region globals
     public GrabbableData data;
+    protected AudioSource grabbableAuidoEmitter;
     private bool isRotating = false;
     #endregion
 
-    public abstract void OnRightClick();
-
-    protected void Start()
+    protected virtual void Start()
     {
         data.rb = this.GetComponent<Rigidbody>();
+        grabbableAuidoEmitter = this.GetComponent<AudioSource>();
+
         data.restingPos = this.transform.position;
+    }
+
+    public virtual void OnPickUp()
+    {
+        PlaySound(data.pickupSound);
+    }
+
+    public virtual void OnInteract()
+    {
+        PlaySound(data.interactSound);
     }
 
     public IEnumerator RotateToGrabOrientation(float duration)
@@ -33,14 +43,14 @@ public abstract class Grabbable : MonoBehaviour
         data.rb.isKinematic = true;
 
         //Rotate card
-        while ((this.transform.localRotation != Quaternion.Euler(data.holdingOrientation)) && (counter < duration))
+        while ((this.transform.rotation != Quaternion.Euler(data.holdingOrientation)) && (counter < duration))
         {
             counter += Time.deltaTime;
-            this.transform.localRotation = Quaternion.Slerp(startRot, Quaternion.Euler(data.holdingOrientation), counter / duration);
+            this.transform.rotation = Quaternion.Slerp(startRot, Quaternion.Euler(data.holdingOrientation), counter / duration);
             yield return null;
         }
 
-        this.transform.localRotation = Quaternion.Euler(data.holdingOrientation);
+        this.transform.rotation = Quaternion.Euler(data.holdingOrientation);
         data.rb.isKinematic = false;
     }
 
@@ -50,5 +60,23 @@ public abstract class Grabbable : MonoBehaviour
         {
             data.restingPos = this.transform.position;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        PlaySound(data.impactSound);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        PlaySound(data.impactSound);
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        grabbableAuidoEmitter.Stop();
+        grabbableAuidoEmitter.pitch = Random.Range(1f, 1.5f);
+        grabbableAuidoEmitter.volume = Random.Range(.3f, .6f);
+        grabbableAuidoEmitter.PlayOneShot(clip);
     }
 }

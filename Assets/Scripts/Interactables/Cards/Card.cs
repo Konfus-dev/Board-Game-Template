@@ -10,7 +10,17 @@ public class Card : Grabbable
     private bool isFlipped = false;
     #endregion
 
-    public override void OnRightClick()
+    public override void OnPickUp()
+    {
+        if (isFlipped) 
+            data.holdingOrientation = new Vector3(90, data.holdingOrientation.y, 0);
+        else
+            data.holdingOrientation = new Vector3(-90, data.holdingOrientation.y, 0);
+
+        base.OnPickUp();
+    }
+
+    public override void OnInteract()
     {
         if (isFlipped)
         {
@@ -23,6 +33,7 @@ public class Card : Grabbable
             StartCoroutine(RotateCard(Quaternion.Euler(new Vector3(90, this.transform.rotation.eulerAngles.y, this.transform.eulerAngles.z)), .3f));
             isFlipped = true;
         }
+        base.OnInteract();
     }
 
     public IEnumerator MoveCardTo(Vector3 toPosition, float duration)

@@ -4,36 +4,29 @@ using UnityEngine;
 public class Dice : Grabbable
 {
     #region globals
-    private List<DiceSide> diceSides ;
+    public AudioClip rolledAudio;
     #endregion
 
-    // Start is called before the first frame update
-    private void Start()
+    protected override void Start()
     {
         data.rb = GetComponent<Rigidbody>();
-
-        diceSides = new List<DiceSide>();
-        foreach (Transform child in transform)
-        {
-            diceSides.Add(child.gameObject.GetComponent<DiceSide>());
-        }
         base.Start();
     }
 
-    //if object is grabbed and has been right clicked
-    public override void OnRightClick()
+    public override void OnInteract()
     {
         if (Hand.Instance.grabbedObj != null && Hand.Instance.grabbedObj == this.gameObject)
         {
             RollDice();
         }
+        base.OnInteract();
     }
 
-    //roll dice
     public void RollDice()
     {
         data.rb.AddForce(Random.Range(10, 100), Random.Range(0, 2), Random.Range(10, 100));
         data.rb.AddTorque(Random.Range(100, 500), Random.Range(10, 500), Random.Range(10, 500));
-        
+        grabbableAuidoEmitter.clip = rolledAudio;
+        grabbableAuidoEmitter.Play();
     }
 }

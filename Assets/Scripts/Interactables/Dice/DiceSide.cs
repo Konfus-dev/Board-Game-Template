@@ -4,27 +4,11 @@ using UnityEngine;
 
 public class DiceSide : MonoBehaviour
 {
-    bool isGrounded;
     public int SideVal;
 
-    private void OnTriggerStay(Collider hit)
+    private void OnTriggerEnter(Collider hit)
     {
-        if(hit.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider hit)
-    {
-        if(hit.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
-
-    public bool IsGrounded()
-    {
-        return isGrounded;
+        this.transform.parent.GetComponent<AudioSource>()
+            .PlayOneShot(this.transform.parent.GetComponent<Grabbable>().data.impactSound);
     }
 }

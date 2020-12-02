@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class PlayerPiece : Grabbable
 {
-    public override void OnRightClick()
-    {
-        //does nothing on right click
-    }
+    //just exists to be able to pickup player piece
 }

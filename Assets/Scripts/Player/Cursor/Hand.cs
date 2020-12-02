@@ -10,16 +10,24 @@ public class Hand : MonoBehaviour
     public float moveSpeed = 5f;
     public float maxDist = 25;
     public float minDist = -25;
+
+    [HideInInspector]
     public bool playGrabAnim = false;
+    [HideInInspector]
     public bool playPointAnim = false;
+    [HideInInspector]
     public GameObject grabbedObj = null;
 
+    private AudioSource handAudioEmitter;
     private Plane plane = new Plane(Vector3.up, 0);
     private float dist = 20;
+    private bool hasPlayedClickAudio = false;
     #endregion
 
     private void Awake()
     {
+        handAudioEmitter = this.GetComponent<AudioSource>();
+
         if (Instance == null)
             Instance = this;
 
@@ -31,7 +39,7 @@ public class Hand : MonoBehaviour
     {
         MoveHand();
         PlayPointAnim();
-        PlayGrabAnim();
+        PlayGrabEffects();
 
         if (Input.GetMouseButtonDown(0) && grabbedObj == null && TryGrab())
         {
@@ -54,10 +62,22 @@ public class Hand : MonoBehaviour
         }
     }
 
-    private void PlayGrabAnim()
+    private void PlayGrabEffects()
     {
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1)) playGrabAnim = true;
-        else playGrabAnim = false;
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        {
+            playGrabAnim = true;
+            if (!hasPlayedClickAudio)
+            {
+                handAudioEmitter.Play();
+                hasPlayedClickAudio = true;
+            }
+        }
+        else
+        {
+            playGrabAnim = false;
+            hasPlayedClickAudio = false;
+        }
     }
 
     private void PlayPointAnim()
@@ -99,13 +119,13 @@ public class Hand : MonoBehaviour
         grabbedObj.GetComponent<Collider>().enabled = false;
 
         Grabbable grabbable = grabbedObj.GetComponent<Grabbable>();
-
         StartCoroutine(grabbable.RotateToGrabOrientation(.25f));
+        grabbable.OnPickUp();
 
         while (grabbedObj != null)
         {
             if (Input.GetMouseButtonDown(1) && grabbable != null)
-                grabbable.OnRightClick();
+                grabbable.OnInteract();
 
             grabbedObj.GetComponent<Rigidbody>().velocity =
                     Vector3.SmoothDamp(grabbedObj.GetComponent<Rigidbody>().velocity, 
