@@ -6,7 +6,7 @@ public abstract class Grabbable : MonoBehaviour
     #region globals
     public GrabbableData data;
     protected AudioSource grabbableAuidoEmitter;
-    private bool isRotating = false;
+    internal bool isRotating = false;
     #endregion
 
     protected virtual void Start()
@@ -15,6 +15,24 @@ public abstract class Grabbable : MonoBehaviour
         grabbableAuidoEmitter = this.GetComponent<AudioSource>();
 
         data.restingPos = this.transform.position;
+    }
+
+    private void FixedUpdate()
+    {
+        if (data.rb.IsSleeping())
+        {
+            data.restingPos = this.transform.position;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        PlaySound(data.impactSound);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        PlaySound(data.impactSound);
     }
 
     public virtual void OnPickUp()
@@ -54,29 +72,9 @@ public abstract class Grabbable : MonoBehaviour
         data.rb.isKinematic = false;
     }
 
-    private void FixedUpdate()
-    {
-        if (data.rb.IsSleeping())
-        {
-            data.restingPos = this.transform.position;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        PlaySound(data.impactSound);
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        PlaySound(data.impactSound);
-    }
-
     private void PlaySound(AudioClip clip)
     {
-        grabbableAuidoEmitter.Stop();
-        grabbableAuidoEmitter.pitch = Random.Range(1f, 1.5f);
-        grabbableAuidoEmitter.volume = Random.Range(.3f, .6f);
-        grabbableAuidoEmitter.PlayOneShot(clip);
+        SoundPlayer soundPlayer = new SoundPlayer();
+        soundPlayer.PlaySoundOnce(grabbableAuidoEmitter, clip);
     }
 }

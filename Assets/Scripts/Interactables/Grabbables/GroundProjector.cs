@@ -8,7 +8,7 @@ public class GroundProjector : MonoBehaviour
     private GameObject copy;
     #endregion
 
-    public IEnumerator OnGrab()
+    public IEnumerator OnGrab(PlayerGrab hand)
     {
         copy = Instantiate(this.gameObject);
 
@@ -42,10 +42,8 @@ public class GroundProjector : MonoBehaviour
 
         Quaternion originalRot = this.transform.rotation;
 
-        while (Hand.Instance.gameObject != null)
+        while (hand.grabbedObj != null)
         {
-            if (copy == null) yield return null;
-
             RaycastHit hit;
             Vector3 placePos = Vector3.up * 10000;
 
@@ -54,11 +52,8 @@ public class GroundProjector : MonoBehaviour
                 placePos = new Vector3(hit.point.x, hit.point.y + .1f, hit.point.z);
             }
 
-            if (copy != null)
-            {
-                copy.transform.position = placePos;
-                copy.transform.rotation = Quaternion.Euler(new Vector3(originalRot.eulerAngles.x, this.transform.rotation.eulerAngles.y, originalRot.eulerAngles.z));
-            }
+            copy.transform.position = placePos;
+            copy.transform.rotation = Quaternion.Euler(new Vector3(originalRot.eulerAngles.x, this.transform.rotation.eulerAngles.y, originalRot.eulerAngles.z));
                 
             yield return null;
         }

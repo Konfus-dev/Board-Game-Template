@@ -21,7 +21,7 @@ public class BookInteraction : MonoBehaviour
 		if (book.page == book.pages.Count + 1) nextcollider.tag = "Untagged";
 		else nextcollider.tag = "Clickable";
 
-		if (book && prevcollider && nextcollider && Input.GetMouseButtonDown(0))
+		if (book && prevcollider && nextcollider && Input.GetButtonDown("Left Interact"))
 		{
 			RaycastHit	hit;
 			if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))

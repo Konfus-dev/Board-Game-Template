@@ -17,7 +17,7 @@ public class Radio : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetButtonDown("Left Interact"))
         {
             speakers.Stop();
             if (playlistPos < playlist.Length) playlistPos++;
@@ -25,7 +25,7 @@ public class Radio : MonoBehaviour
             speakers.clip = playlist[playlistPos];
             speakers.Play();
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if (Input.GetButtonDown("Right Interact"))
         {
             speakers.Stop();
             if (playlistPos > 0) playlistPos--;

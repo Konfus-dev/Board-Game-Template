@@ -2,37 +2,31 @@
 
 public class Player : MonoBehaviour
 {
-    //public arrays
-    public PlayerStats PlayersStats;
+    #region global
+    [HideInInspector]
+    public PlayerInput input;
+    [HideInInspector]
+    public PlayerGrab grab;
+    [HideInInspector]
+    public PlayerCamera camera;
+
+    internal PlayerData data;
+    internal bool toggleMagnify = false;
+    #endregion
 
     private void Start()
     {
-        //Set Cursor to not be visible
-        Cursor.visible = false;
+        camera = this.GetComponent<PlayerCamera>();
+        input = this.GetComponent<PlayerInput>();
+        grab = this.GetComponent<PlayerGrab>();
     }
 
-    void Update()
+    private void Update()
     {
-        
-    }
-
-    private void UpgradeRank(int player)
-    {
-        PlayersStats.Rank++;
-    }
-    //add cash to player
-    private void AddCash(int player, float cash)
-    {
-        PlayersStats.CashMoney += cash;
-    }
-    //add credits to player
-    private void AddCredits(int player, int credits)
-    {
-        PlayersStats.Credits += credits;
-    }
-    //add counters to player
-    private void AddCounters(int player, int counters)
-    {
-        PlayersStats.Counters += counters;
+        if (!camera.isRotating && input.leftInteract 
+            && grab.grabbedObj == null && grab.TryGrab())
+        {
+            StartCoroutine(grab.GrabObj());
+        }
     }
 }

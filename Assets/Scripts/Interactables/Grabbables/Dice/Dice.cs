@@ -15,10 +15,7 @@ public class Dice : Grabbable
 
     public override void OnInteract()
     {
-        if (Hand.Instance.grabbedObj != null && Hand.Instance.grabbedObj == this.gameObject)
-        {
-            RollDice();
-        }
+        RollDice();
         base.OnInteract();
     }
 

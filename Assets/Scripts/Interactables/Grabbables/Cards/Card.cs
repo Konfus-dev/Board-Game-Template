@@ -74,6 +74,8 @@ public class Card : Grabbable
         }
 
         //re-enable physics
+        this.transform.position = toPosition;
+        data.rb.velocity = Vector3.zero;
         data.rb.isKinematic = false;
         isMoving = false;
     }
