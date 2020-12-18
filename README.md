@@ -1,4 +1,4 @@
-# Board-Game
+# Board Game Template
 An UNFINISHED template for board games. 
 Will have networked multiplayer.
 Will support dice, cards, player pieces, different boards, etc... 
